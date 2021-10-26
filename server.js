@@ -3,10 +3,11 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
-const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 const app = express();
+
+const PORT = process.env.PORT || 3001;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 app.use(logger("dev"));
 
@@ -20,6 +21,9 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false
 });
+
+// Use this to log mongo queries being executed!
+mongoose.set('debug', true);
 
 // routes
 app.use(require("./routes/api.js"));
