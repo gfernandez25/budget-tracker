@@ -38,7 +38,7 @@ just contribute however you can
 manual test only
 
 ## Questions
-for any questions please send me and email to <> or check out my GitHub profile: [gfernandez25](https://github.com/gfernandez25)  
+for any questions please send me and email or check out my GitHub profile: [gfernandez25](https://github.com/gfernandez25)  
 
 
 
