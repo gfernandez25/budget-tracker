@@ -15,7 +15,7 @@ request.onsuccess = function(event) {
 
   // check if app is online, if yes run checkDatabase() function to send all local db data to api
   if (navigator.onLine) {
-    uploadTransactions();
+    uploadtransactions();
   }
 };
 
@@ -36,7 +36,7 @@ function saveRecord(record) {
   budgetObjectStore.add(record);
 }
 
-function uploadTransactions() {
+function uploadtransactions() {
   // open a transaction on your pending db
   const transaction = db.transaction(['new_budget'], 'readwrite');
 
@@ -80,4 +80,4 @@ function uploadTransactions() {
 }
 
 // listen for app coming back online
-window.addEventListener('online', uploadTransactions);
+window.addEventListener('online', uploadtransactions);
